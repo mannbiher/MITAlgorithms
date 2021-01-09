@@ -3,7 +3,15 @@ General Powerful algorithm design technique
 
 Kind of exhaustive search Exponential search. DP gives polynomial time 
 
+```
 DP ~= Careful bruteforce
+   ~= Guessing + Recursion + Memoization 
+   ~= Shortest Paths in some DAGs
+
+
+time = Number of subproblems*time per subproblem
+        (Treat recursive calls as O(1) its already counted)
+```
 
 Why? Dynamic Programming => origin sounded cool :)
 
