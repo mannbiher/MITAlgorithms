@@ -20,4 +20,38 @@ Is it a good algorithm.
 
 Base case delta(s,s) = 0
 
+```
+  /<------- a --------> \
+ s          ^            v
+ \          |           /
+  \-------> b <--------/
 
+                                        |--- delta(s,s)
+delta(s,v) => delta(s,a) ==> delta(s,b) |
+                                        |--- delta(s,v)
+
+```
+Infinite time or graphs with cycle.
+
+for DAGs O(V+E)
+
+Time for subprob delta(s,v)
+=> Total time = sum(in_degree(v)) = O(E)
+
+Bellmen Ford?
+
+Lessons Learned: Subproblem dependencies should be asyclic
+
+Can we apply on cyclic graph? Make it asyclic.
+
+1. Explode the graphs in layers
+2. Each layer edges goes down
+
+delta_k (s,v) => shortest weight of s to v path that uses <= k edges
+
+Recurrence:
+delta_k(s,v) = min(delta_k-1(s,u)+w(u,v))
+
+Increased the subproblems V^2
+Total Running Algorithm O(VE)
+Bellman Ford Algorithm

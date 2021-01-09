@@ -38,13 +38,16 @@ def fib(n):
 	return f
 ```
 
-Recursion Tree:
+Recursion Tree
+
+```
 
                  |- f(n-2)
      |--f(n-1) --|- f(n-3)
 fn---|
      |--f(n-2) --|- f(n-3)
-	          |- f(n-4)
+	             |- f(n-4)
+```
 
 Complexity
 
@@ -77,9 +80,11 @@ return fib[n]
 - Exactly same computation
 - Topologic sort of subproblem dependency DAG
 
+```
  |-------->-------\ /------>-------\
 Fn-4 --> Fn-3 --> Fn-2 --> Fn-1 --> Fn
           \--------->-------/
 
+```
 - Can often save space
 E.g. can store only last two values
